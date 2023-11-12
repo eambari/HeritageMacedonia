@@ -37,11 +37,11 @@ Regularly update the database with the latest information from OpenStreetMap.
 Implement data validation to ensure accuracy and consistency.
 
 
-Endrit Ambari
+Endrit Ambari   211541
 
-Harbin Sela
+Harbin Sela     211553
 
-Ariton Spahiu
+Ariton Spahiu   211552
 
-Era Duka
+Era Duka        201507
 
