@@ -30,7 +30,7 @@ public class HeritageMacedoniaApplication {
                 // Iterate over the result set and apply the pipe to each row
                 int i = 1;
                 while (resultSet.next()) {
-                    // Assuming the 'attributes' column is of type TEXT
+                    // 'attributes' column is of type TEXT
                     String attributes = resultSet.getString("attributes");
 
                     // Run the filters on each row

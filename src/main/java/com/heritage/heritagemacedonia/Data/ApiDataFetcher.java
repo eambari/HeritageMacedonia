@@ -13,7 +13,7 @@ public class ApiDataFetcher {
         // Fetch data from the API
         String apiData = fetchApi();
 
-        // Now, create an instance of OSMDataImporter and insert the data into the database
+        // Create an instance of OSMDataImporter and insert the data into the database
         OSMDataImporter osmDataImporter = new OSMDataImporter();
         osmDataImporter.insertDataFromXML(apiData);
 
@@ -54,7 +54,6 @@ public class ApiDataFetcher {
 
                 reader.close();
 
-//                System.out.println("API Response: " + response.toString());
                 result = response.toString();
             } else {
                 System.out.println("Error: HTTP request failed with response code " + responseCode);
