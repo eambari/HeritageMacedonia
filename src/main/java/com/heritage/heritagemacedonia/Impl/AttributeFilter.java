@@ -9,7 +9,6 @@ public class AttributeFilter implements Filter<String> {
         // Parse the input JSON string
         JsonParser parser = new JsonParser();
         JsonObject attributes = parser.parse(input).getAsJsonObject();
-
         // Check if the specified attribute is present
         if (attributes.has(attributeName)) {
             return attributes.get(attributeName).getAsString();
