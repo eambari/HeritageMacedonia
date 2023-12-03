@@ -15,7 +15,7 @@ public class MkHeritageApplication {
 
 	public static void main(String[] args) {
 		ClassLoader classLoader = MkHeritageApplication.class.getClassLoader();
-		File file = new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
+		File file = new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey/serviceAccountKey.json")).getFile());
 
 		try (FileInputStream serviceAccount = new FileInputStream(file.getAbsolutePath())) {
 			FirebaseOptions options = FirebaseOptions.builder()

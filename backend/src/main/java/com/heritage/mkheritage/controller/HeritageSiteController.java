@@ -1,20 +1,28 @@
 package com.heritage.mkheritage.controller;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.heritage.mkheritage.model.HeritageSite;
 import com.heritage.mkheritage.service.HeritageSiteService;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping(path = "/HeritageSite")
+@RequestMapping(path = "/heritage")
 public class HeritageSiteController {
 
     private final HeritageSiteService heritageSiteService;
+    private final ResourceLoader resourceLoader;
 
-    public HeritageSiteController(HeritageSiteService heritageSiteService) {
+    public HeritageSiteController(HeritageSiteService heritageSiteService, ResourceLoader resourceLoader) {
         this.heritageSiteService = heritageSiteService;
+        this.resourceLoader = resourceLoader;
     }
 
     @PostMapping("/create")
@@ -37,16 +45,6 @@ public class HeritageSiteController {
     public List<HeritageSite> getHeritageSiteByName(@RequestParam String name) throws ExecutionException, InterruptedException {
         return heritageSiteService.getHeritageSiteByName(name);
     }
-
-//    @GetMapping("/categories")
-//    public List<String> getCategories() {
-//        return heritageSiteService.getCategories();
-//    }
-//
-//    @GetMapping("/cities")
-//    public List<String> getCities() {
-//        return heritageSiteService.getCities();
-//    }
 
     @DeleteMapping("/delete/{id}")
     public String deleteHeritageSite(@PathVariable String id) {

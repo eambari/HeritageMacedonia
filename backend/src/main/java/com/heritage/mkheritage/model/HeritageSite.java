@@ -9,7 +9,10 @@ import lombok.*;
 public class HeritageSite {
     private String id;
     private String name;
-    private String siteType;
-    private double lat;
-    private double lon;
+    private String historic;
+    private String natural;
+    private String tourism;
+    private String address;
+    private String lat;
+    private String lon;
 }
