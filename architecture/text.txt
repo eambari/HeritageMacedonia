@@ -1,0 +1,74 @@
+_Conceptual Architecture_
+
+1. Components:
+
+•Frontend (React):
+ -Home component
+ -List component
+
+•Backend (Spring Boot):
+ -Controller
+ -Service
+ -Repository
+ -Model
+
+2.Interaction:
+
+ -Frontend interacts with the Backend through RESTful APIs.
+ -React components communicate with each other through routing.
+
+
+_Execution Architecture_
+
+1. Flow:
+
+ •The frontend makes API calls to the backend for data retrieval and manipulation.
+ •Backend processes requests, interacts with the database, and sends responses.
+
+2. Data Flow:
+
+ •Data flows from the H2 database to the Spring Boot backend.
+ •React components retrieve and display data fetched from the backend.
+
+_Implementation Architecture_
+
+1.Backend (Spring Boot):
+
+•Model:
+ -Represents entities stored in the database.
+ -Annotated with @Entity, @Data, @NoArgsConstructor, @AllArgsConstructor.
+
+•Repository:
+ -Interface extending JpaRepository for database operations.
+
+•Service:
+Implements business logic, interacts with the repository.
+
+•Controller:
+-Defines RESTful endpoints, interacts with the service.
+
+•Database Configuration:
+-Configures the connection to the H2 database in application.properties.
+
+2.Frontend (React):
+
+ •Components:
+-Home component for the home page.
+-List component for displaying the list of items.
+
+•Routing:
+-Uses React Router for navigation between different screens.
+
+•State Management:
+-Utilizes useState to manage component state.
+-Uses useEffect to fetch data from backend APIs.
+
+•API Integration:
+-Fetches data from Spring Boot backend using fetch.
+
+--GitHub Folder Structure--
+/Homework2
+/architecture
+conceptual_architecture.png (conceptual architecture diagram)
+execution_architecture.png (execution architecture diagram)
+implementation_architecture.png (implementation architecture diagram)
