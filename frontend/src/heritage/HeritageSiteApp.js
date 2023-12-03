@@ -8,7 +8,7 @@ const HeritageSiteList = ({ heritageSites }) => (
         <ul>
             {heritageSites.map((site) => (
                 <li key={site.id}>
-                    {site.historical &&
+                    {site.historic &&
                         <>
                     <strong>{site.name}</strong>
                     <p>{site.address}</p>
