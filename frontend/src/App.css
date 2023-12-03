@@ -23,11 +23,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.headerStyle {
+  height: 80px;
+  background-color: rosybrown;
+  background-image: linear-gradient(315deg, rosybrown 0%, saddlebrown 74%);
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

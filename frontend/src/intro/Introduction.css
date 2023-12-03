@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.introduction-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff; /* Set your preferred background color */
+    color: #333; /* Set your preferred text color */
+}
+
+.introduction {
+    max-width: 600px;
+    text-align: center;
+}
+
+.introduction h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Set your preferred button color */
+    color: #fff; /* Set your preferred button text color */
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+    background-color: #45a049; /* Set your preferred hover color */
+}

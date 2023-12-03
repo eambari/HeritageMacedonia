@@ -1,0 +1,42 @@
+/* HeritageSiteApp.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.loader {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 10px;
+    }
+}
