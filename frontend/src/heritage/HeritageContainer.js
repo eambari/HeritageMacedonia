@@ -41,7 +41,7 @@ const HeritageContainer = () => {
 
     return (
         <div className={classes.main}>
-            <div className={classes.searchContainer}>
+            <div className={classes.searchBar}>
                 <SearchFilter onSearch={handleSearch} />
             </div>
             <div className={classes.heritageContainer}>
@@ -57,7 +57,9 @@ const HeritageContainer = () => {
                             }))}
                         />
                     ) : (
-                        "No results found."
+                        <div className={classes.noResults}>
+                            <h1>No results found</h1>
+                        </div>
                     )}
                 </div>
             </div>

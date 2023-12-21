@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './HeritageApp.css'; // Import your CSS file
+import './HeritageSiteApp.module.css'; // Import your CSS file
 
 const HeritageSiteList = ({ heritageSites }) => (
     <div>
