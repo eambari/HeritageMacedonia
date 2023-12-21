@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router";
 import {Link} from "react-router-dom";
-import Map from "./Map";
+import Map from "../shared/Map";
 import Information from "./Information";
 import classes from "./HeritageSite.module.css";
 import axios from "axios";

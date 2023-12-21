@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Map from "./Map";
-import SearchFilter from "./SearchFilter";
+import Map from "../shared/Map";
+import SearchFilter from "../shared/SearchFilter";
 import classes from "./HeritageContainer.module.css";
 import axios from "axios";
 
