@@ -16,5 +16,7 @@
 }
 
 .searchInput:focus {
-    border-color: #007bff;
+    border-color: saddlebrown;
+    border-width: thin;
+    border-style: groove;
 }
