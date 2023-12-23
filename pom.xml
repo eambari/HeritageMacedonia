@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.heritage</groupId>
 	<artifactId>MkHeritage</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>MkHeritage</name>
 	<description>MkHeritage</description>
 	<properties>
@@ -71,9 +71,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
 				<configuration>
 					<source>17</source>
 					<target>17</target>
+					<verbose>true</verbose>
 				</configuration>
 			</plugin>
 		</plugins>
