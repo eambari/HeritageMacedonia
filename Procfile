@@ -1,1 +1,1 @@
-web: java -jar target/MkHeritage-1.0.0.jar
+web: java -Dserver.port=$PORT -jar target/MkHeritage-1.0.0.jar
