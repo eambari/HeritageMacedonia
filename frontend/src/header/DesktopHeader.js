@@ -1,7 +1,7 @@
 import React from "react";
 import "./desktopHeader.css";
 import {Link} from "react-router-dom";
-import {ReactComponent as LogoSVG} from './logo.svg'
+import {ReactComponent as LogoSVG} from '../logo.svg'
 const Header = (props) => {
     return (
         <div className="main-header">
