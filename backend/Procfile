@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/heritage-macedonia.jar
+web: java -Dserver.port=$PORT -jar target/MkHeritage-0.0.1.jar
