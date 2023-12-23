@@ -11,7 +11,7 @@ const HeritageContainer = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:9999/heritage/all");
+                const response = await axios.get("https://heritage-macedonia-f654e36c0f1a.herokuapp.com/heritage/all");
                 setHeritageSites(response.data);
                 setFilteredSites(response.data); // Initialize filtered sites with all sites
             } catch (error) {
