@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/heritage-macedonia.jar
+web: java -jar target/MkHeritage-1.0.0.jar
