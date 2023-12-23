@@ -28,7 +28,7 @@ const HeritageSiteApp = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:9999/heritage/all'); // Update with your backend URL
+                const response = await axios.get('https://heritage-macedonia-f654e36c0f1a.herokuapp.com/heritage/all'); // Update with your backend URL
                 setHeritageSites(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

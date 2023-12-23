@@ -11,7 +11,7 @@ const HeritageSite = (props) => {
   const {id} = useParams();
   useEffect(() => {
     const loadHeritage = async () => {
-      const data = await axios.get(`http://localhost:9999/heritage/get/${id}`);
+      const data = await axios.get(`https://heritage-macedonia-f654e36c0f1a.herokuapp.com/heritage/get/${id}`);
       setHeritageData(data.data);
       setShowMap(true);
     };

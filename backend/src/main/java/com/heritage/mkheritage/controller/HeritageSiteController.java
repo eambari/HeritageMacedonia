@@ -1,15 +1,8 @@
 package com.heritage.mkheritage.controller;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.heritage.mkheritage.model.HeritageSite;
 import com.heritage.mkheritage.service.HeritageSiteService;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -18,11 +11,9 @@ import java.util.concurrent.ExecutionException;
 public class HeritageSiteController {
 
     private final HeritageSiteService heritageSiteService;
-    private final ResourceLoader resourceLoader;
 
-    public HeritageSiteController(HeritageSiteService heritageSiteService, ResourceLoader resourceLoader) {
+    public HeritageSiteController(HeritageSiteService heritageSiteService) {
         this.heritageSiteService = heritageSiteService;
-        this.resourceLoader = resourceLoader;
     }
 
     @PostMapping("/create")
