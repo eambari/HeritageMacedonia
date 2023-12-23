@@ -3,26 +3,30 @@ import Map from "../shared/Map";
 import SearchFilter from "../shared/SearchFilter";
 import classes from "./HeritageContainer.module.css";
 import axios from "axios";
+import Loader from "../shared/Loader";
 
 const HeritageContainer = () => {
     const [heritageSites, setHeritageSites] = useState([]);
-    const [filteredSites, setFilteredSites] = useState([]); // State for filtered sites
+    const [filteredSites, setFilteredSites] = useState([]);
+    const [isLoading, setIsLoading] = useState(true); // Set loading to true initially
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("https://heritage-macedonia-f654e36c0f1a.herokuapp.com/heritage/all");
                 setHeritageSites(response.data);
-                setFilteredSites(response.data); // Initialize filtered sites with all sites
+                setFilteredSites(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
+            } finally {
+                // Set loading to false regardless of success or error
+                setIsLoading(false);
             }
         };
 
         fetchData();
     }, []);
 
-    // Function to handle search
     const handleSearch = (searchTerm) => {
         if (!heritageSites || heritageSites.length === 0) {
             return;
@@ -34,7 +38,7 @@ const HeritageContainer = () => {
             site.name &&
             site.address &&
             (site.name.toLocaleLowerCase().includes(normalizedSearchTerm) ||
-            site.address.toLocaleLowerCase().includes(normalizedSearchTerm))
+                site.address.toLocaleLowerCase().includes(normalizedSearchTerm))
         );
         setFilteredSites(filtered);
     };
@@ -45,23 +49,29 @@ const HeritageContainer = () => {
                 <SearchFilter onSearch={handleSearch} />
             </div>
             <div className={classes.heritageContainer}>
-                <div className={classes.heritageMap}>
-                    {filteredSites.length ? (
-                        <Map
-                            markers={filteredSites.map((place) => ({
-                                ...place,
-                                position: {
-                                    lat: +place.lat,
-                                    lng: +place.lon,
-                                },
-                            }))}
-                        />
-                    ) : (
-                        <div className={classes.noResults}>
-                            <h1>No results found</h1>
-                        </div>
-                    )}
-                </div>
+                {isLoading ? (
+                    <div className={classes.noResults}>
+                        <Loader/>
+                    </div>
+                ) : (
+                    <div className={classes.heritageMap}>
+                        {filteredSites.length ? (
+                            <Map
+                                markers={filteredSites.map((place) => ({
+                                    ...place,
+                                    position: {
+                                        lat: +place.lat,
+                                        lng: +place.lon,
+                                    },
+                                }))}
+                            />
+                        ) : (
+                            <div className={classes.noResults}>
+                                <h1>No results found</h1>
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );
