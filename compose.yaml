@@ -1,6 +1,7 @@
 version: '3'
 services:
   mainbackend:
+    image: endritambari/heritagemk-mainbackend:latest
     build:
       context: .
       dockerfile: Dockerfile
