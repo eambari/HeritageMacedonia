@@ -8,8 +8,8 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #fff; /* Set your preferred background color */
-    color: #333; /* Set your preferred text color */
+    background-color: #fff;
+    color: #333;
 }
 
 .introduction {
@@ -31,8 +31,8 @@ body, html {
 .explore-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Set your preferred button color */
-    color: #fff; /* Set your preferred button text color */
+    background-color: #4CAF50;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
@@ -40,5 +40,5 @@ body, html {
 }
 
 .explore-button:hover {
-    background-color: #45a049; /* Set your preferred hover color */
+    background-color: #45a049;
 }

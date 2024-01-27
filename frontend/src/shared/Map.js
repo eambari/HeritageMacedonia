@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 function Map({markers}) {
   const [activeMarker, setActiveMarker] = useState(null);
   const {isLoaded} = useLoadScript({
-    googleMapsApiKey: "AIzaSyDaqcuqPLMXH1NOKt3fkYpdJb4tmttxfP8", // Add your API key
+    googleMapsApiKey: "AIzaSyDaqcuqPLMXH1NOKt3fkYpdJb4tmttxfP8",
     language: "mk",
   });
   console.log(markers);
