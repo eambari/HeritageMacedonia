@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.heritage</groupId>
 	<artifactId>MkHeritage</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.8</version>
 	<name>MkHeritage</name>
 	<description>MkHeritage</description>
 	<properties>
@@ -61,6 +61,11 @@
 			<artifactId>firebase-admin</artifactId>
 			<version>9.1.1</version>
 		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-tcnative-boringssl-static</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
