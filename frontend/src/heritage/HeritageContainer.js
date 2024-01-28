@@ -8,7 +8,7 @@ import Loader from "../shared/Loader";
 const HeritageContainer = () => {
     const [heritageSites, setHeritageSites] = useState([]);
     const [filteredSites, setFilteredSites] = useState([]);
-    const [isLoading, setIsLoading] = useState(true); // Set loading to true initially
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,7 +19,6 @@ const HeritageContainer = () => {
             } catch (error) {
                 console.error("Error fetching data:", error);
             } finally {
-                // Set loading to false regardless of success or error
                 setIsLoading(false);
             }
         };

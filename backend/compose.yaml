@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mainbackend:
+    image: endritambari/heritagemk-mainbackend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9091:9091"
+    restart: always

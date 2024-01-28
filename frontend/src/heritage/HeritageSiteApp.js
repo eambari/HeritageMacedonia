@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './HeritageSiteApp.module.css'; // Import your CSS file
+import './HeritageSiteApp.module.css';
 
 const HeritageSiteList = ({ heritageSites }) => (
     <div>
@@ -38,7 +38,7 @@ const HeritageSiteApp = () => {
         };
 
         fetchData();
-    }, []); // Empty dependency array ensures useEffect runs only once (on component mount)
+    }, []);
 
     return (
         <div className="app-container">

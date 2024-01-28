@@ -1,12 +1,9 @@
-/* desktopHeader.css */
 
-/* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Apply a box-sizing border-box model for easier sizing */
 * {
     box-sizing: border-box;
 }
@@ -19,7 +16,6 @@ body, h1, h2, h3, p, ul, li {
     background-color: saddlebrown;
 }
 
-/* Style the container div */
 .container {
     display: flex;
     align-items: center;
@@ -36,7 +32,6 @@ body, h1, h2, h3, p, ul, li {
     transition: color 0.3s ease-in-out;
 }
 
-/* Style the navigation links */
 .nav {
     display: flex;
     gap: 20px;
@@ -52,19 +47,17 @@ body, h1, h2, h3, p, ul, li {
     transition: color 0.3s ease-in-out;
 }
 
-/* Add a hover effect on the links */
 .nav a:hover {
-    color: rosybrown; /* Change to your preferred hover color */
+    color: rosybrown;
 }
 
 /* Style the indicator */
 .indicator {
     height: 4px;
-    background-color: rosybrown; /* Change to your preferred indicator color */
+    background-color: rosybrown;
     transition: width 0.3s ease-in-out;
 }
 
-/* Media query for responsiveness */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -75,5 +68,3 @@ body, h1, h2, h3, p, ul, li {
         margin-top: 10px;
     }
 }
-
-/* Additional styles can be added based on your preferences */
