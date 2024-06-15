@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './HeritageSiteApp.module.css';
+import {API_URL} from "../App";
 
 const HeritageSiteList = ({ heritageSites }) => (
     <div>
@@ -28,7 +29,7 @@ const HeritageSiteApp = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://heritage-macedonia-f654e36c0f1a.herokuapp.com/heritage/all'); // Update with your backend URL
+                const response = await axios.get(`${API_URL}/all`);
                 setHeritageSites(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);

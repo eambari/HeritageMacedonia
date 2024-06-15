@@ -5,9 +5,6 @@ import "./About.css";
 const About = () => {
     const teamMembers = [
         { id: 1, name: 'Endrit Ambari', role: 'Developer' },
-        { id: 2, name: 'Harbin Sela', role: 'Developer' },
-        { id: 3, name: 'Ariton Spahiu', role: 'Developer' },
-        { id: 4, name: 'Era Duka', role: 'Developer' },
     ];
 
     return (

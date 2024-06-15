@@ -3,8 +3,8 @@ package com.heritage.mkheritage.controller;
 import com.heritage.mkheritage.model.HeritageSite;
 import com.heritage.mkheritage.service.HeritageSiteService;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping(path = "/heritage")
@@ -17,33 +17,32 @@ public class HeritageSiteController {
     }
 
     @PostMapping("/create")
-    public String createHeritageSite(@RequestBody HeritageSite HeritageSite) throws InterruptedException, ExecutionException {
-        return heritageSiteService.createHeritageSite(HeritageSite);
+    public HeritageSite createHeritageSite(@RequestBody HeritageSite heritageSite) {
+        return heritageSiteService.createHeritageSite(heritageSite);
     }
 
     @GetMapping("/all")
-    public List<HeritageSite> getAllHeritageSites() throws Exception {
+    public List<HeritageSite> getAllHeritageSites() {
         return heritageSiteService.getAllHeritageSites();
     }
 
     @GetMapping("/get/{id}")
-    public HeritageSite getHeritageSiteById(@PathVariable String id) throws InterruptedException, ExecutionException {
+    public HeritageSite getHeritageSiteById(@PathVariable Long id) {
         return heritageSiteService.getHeritageSiteById(id);
     }
 
-    // put the HeritageSite name in a query string
     @GetMapping("/get")
-    public List<HeritageSite> getHeritageSiteByName(@RequestParam String name) throws ExecutionException, InterruptedException {
+    public List<HeritageSite> getHeritageSiteByName(@RequestParam String name) {
         return heritageSiteService.getHeritageSiteByName(name);
     }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteHeritageSite(@PathVariable String id) {
-        return heritageSiteService.deleteHeritageSite(id);
+    public void deleteHeritageSite(@PathVariable Long id) {
+        heritageSiteService.deleteHeritageSite(id);
     }
 
     @PutMapping("/update/{id}")
-    public String updateHeritageSite(@RequestBody HeritageSite HeritageSite) throws ExecutionException, InterruptedException {
-        return heritageSiteService.updateHeritageSite(HeritageSite);
+    public HeritageSite updateHeritageSite(@RequestBody HeritageSite heritageSite) {
+        return heritageSiteService.updateHeritageSite(heritageSite);
     }
 }
