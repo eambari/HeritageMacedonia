@@ -4,7 +4,7 @@ import "./About.css";
 
 const About = () => {
     const teamMembers = [
-        { id: 1, name: 'Endrit Ambari', role: 'Developer' },
+        { id: 1, name: 'Endrit Ambari', role: 'Software Developer' },
     ];
 
     return (
