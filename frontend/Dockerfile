@@ -1,15 +1,9 @@
-FROM node:20.0.0
-
-# Create app directory
-
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY package.json /usr/src/app/
-
+# frontend/Dockerfile
+FROM node:16 AS build
+WORKDIR /app
+COPY . .
 RUN npm install
+RUN npm run build
 
-ADD src /usr/src/app/src
-ADD public /usr/src/app/public
-
-CMD ["npm", "run", "start"]
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
