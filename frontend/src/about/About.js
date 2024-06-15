@@ -30,12 +30,11 @@ const About = () => {
                 </div>
             </div>
             <div className="team-section">
-                <h3>Meet Our Team</h3>
-                <ul>
+                <h2>
                     {teamMembers.map((member) => (
                         <li key={member.id}>{`${member.name} - ${member.role}`}</li>
                     ))}
-                </ul>
+                </h2>
             </div>
         </div>
     );
