@@ -32,7 +32,7 @@ const About = () => {
             <div className="team-section">
                 <h2>
                     {teamMembers.map((member) => (
-                        <li key={member.id}>{`${member.name} - ${member.role}`}</li>
+                        <li key={member.id}>{`${member.name} -- ${member.role}`}</li>
                     ))}
                 </h2>
             </div>
