@@ -4,14 +4,13 @@ import Map from "../shared/Map";
 import Information from "./Information";
 import classes from "./HeritageSite.module.css";
 import axios from "axios";
-import {API_URL} from "../App";
 const HeritageSite = () => {
   const [heritageData, setHeritageData] = useState({});
   const [showMap, setShowMap] = useState(false);
   const {id} = useParams();
   useEffect(() => {
     const loadHeritage = async () => {
-      const data = await axios.get(`${API_URL}/get/${id}`);
+      const data = await axios.get(`${process.env.REACT_APP_API_URL}/get/${id}`);
       setHeritageData(data.data);
       setShowMap(true);
     };

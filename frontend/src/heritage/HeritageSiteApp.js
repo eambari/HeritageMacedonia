@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './HeritageSiteApp.module.css';
-import {API_URL} from "../App";
-
 const HeritageSiteList = ({ heritageSites }) => (
     <div>
         <h2>Heritage Sites</h2>
@@ -29,7 +27,7 @@ const HeritageSiteApp = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${API_URL}/all`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/all`);
                 setHeritageSites(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
