@@ -10,14 +10,14 @@ const About = () => {
     return (
         <div className='main-div'>
             <div>
-                <h1 className="header">About Us</h1>
+                <h1 className="header">About</h1>
             </div>
             <div className="text-header">
                 <div className="text-content">
-                    <h3>Who Are We</h3>
+                    <h3>Who Am I</h3>
                     <p>
-                        We are a group of students currently studying Computer Science at the
-                        'Faculty of Computer Science and Engineering - Skopje'. Our job is to make
+                        I am a student currently studying Computer Science at the
+                        'Faculty of Computer Science and Engineering - Skopje'. My job is to make
                         a project or an application for users who want to explore heritage sites in Macedonia.
                     </p>
                     <h3>The Purpose of the System</h3>
@@ -30,11 +30,11 @@ const About = () => {
                 </div>
             </div>
             <div className="team-section">
-                <h2>
+                <h3>
                     {teamMembers.map((member) => (
-                        <li key={member.id}>{`${member.name} - ${member.role}`}</li>
+                        <p key={member.id}>{`${member.name}`}</p>
                     ))}
-                </h2>
+                </h3>
             </div>
         </div>
     );
