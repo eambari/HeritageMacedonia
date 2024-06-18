@@ -6,7 +6,7 @@ import HeritageSite from "./heritage/HeritageSite";
 import HeritageContainer from "./heritage/HeritageContainer";
 import Introduction from "./intro/Introduction";
 
-export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/heritage';
+const API_URL = process.env.REACT_APP_API_URL || 'http://heritagemk-backend.heritagemk.svc.cluster.local:8080/heritage';
 function App() {
   return (
     <div className="App">
