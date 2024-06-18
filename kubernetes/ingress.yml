@@ -6,7 +6,6 @@ metadata:
 spec:
   stripPrefix:
     prefixes:
-      - /app
       - /api
 
 ---
@@ -23,7 +22,7 @@ spec:
     - host: heritagemk.com
       http:
         paths:
-          - path: /app
+          - path: /
             pathType: Prefix
             backend:
               service:
