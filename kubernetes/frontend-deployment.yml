@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heritagemk-frontend
+  namespace: heritagemk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heritagemk-frontend
+  template:
+    metadata:
+      labels:
+        app: heritagemk-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: eambari/heritagemk-frontend:latest
+          ports:
+            - containerPort: 80
