@@ -4,8 +4,6 @@ import SearchFilter from "../shared/SearchFilter";
 import classes from "./HeritageContainer.module.css";
 import axios from "axios";
 import Loader from "../shared/Loader";
-import {API_URL} from "../App";
-
 const HeritageContainer = () => {
     const [heritageSites, setHeritageSites] = useState([]);
     const [filteredSites, setFilteredSites] = useState([]);
@@ -14,7 +12,7 @@ const HeritageContainer = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${API_URL}/all`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/all`);
                 setHeritageSites(response.data);
                 setFilteredSites(response.data);
             } catch (error) {
